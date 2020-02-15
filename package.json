@@ -1,0 +1,30 @@
+{
+  "name": "webpack_sandbox",
+  "version": "0.0.1",
+  "description": "A safe space to get freaky with Webpack",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andersclark/webpack_sandbox.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Anders Clark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Andersclark/webpack_sandbox/issues"
+  },
+  "homepage": "https://github.com/Andersclark/webpack_sandbox#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}
