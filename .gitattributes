@@ -1,20 +1,14 @@
 # Automatically normalize line endings.
-* text=auto
+* text eol=lf
+
+# Files that will always have LF line endings on checkout.
+*.js text eol=lf
 
 ###############################
 # Git Large File System (LFS) #
 ###############################
 
 # This require installing of LFS via https://git-lfs.github.com/
-
-# Images
-*.gif filter=lfs diff=lfs merge=lfs -text
-*.ico filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text
-*.pdf filter=lfs diff=lfs merge=lfs -text
-*.png filter=lfs diff=lfs merge=lfs -text
-*.psd filter=lfs diff=lfs merge=lfs -text
-*.webp filter=lfs diff=lfs merge=lfs -text
 
 # Fonts
 *.woff2 filter=lfs diff=lfs merge=lfs -text
@@ -30,5 +24,10 @@
 *.zip filter=lfs diff=lfs merge=lfs -text
 
 # BINARIES: Files that should not be modified.
-*.png binary
-*.jpg binary
+*.gif filter=lfs diff=lfs merge=lfs -binary
+*.ico filter=lfs diff=lfs merge=lfs -binary
+*.jpg filter=lfs diff=lfs merge=lfs -binary
+*.pdf filter=lfs diff=lfs merge=lfs-binary
+*.png filter=lfs diff=lfs merge=lfs -binary
+*.psd filter=lfs diff=lfs merge=lfs -binary
+*.webp filter=lfs diff=lfs merge=lfs -binary
