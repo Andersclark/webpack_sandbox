@@ -26,23 +26,16 @@ module.exports = {
   },
   module: {
     rules: [
-      { // config for es6 jsx
+      { // es6 jsx
+        test: /\.js$/,
         exclude: /node_modules/,
         use: ['babel-loader', 'eslint-loader'],
       },
-      { // config for sass compilation
-        test: /\.scss$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-          },
-          'css-loader',
-          {
-            loader: 'sass-loader',
-          },
-        ],
+      { // css
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
-      { // config for images
+      { // images
         test: /\.(png|svg|jpg|jpeg|gif)$/,
         use: [
           {
@@ -53,7 +46,7 @@ module.exports = {
           },
         ],
       },
-      { // config for fonts
+      { // fonts
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: [
           {
